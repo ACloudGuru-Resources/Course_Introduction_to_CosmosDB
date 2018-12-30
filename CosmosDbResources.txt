@@ -1,0 +1,54 @@
+1_3 - Compliance Details https://azure.microsoft.com/en-au/blog/azure-cosmosdb-secure-private-compliant/ 
+1_4 - Cosmos Capacity Planner https://www.documentdb.com/capacityplanner
+1_4 - Azure Pricing Calculator https://azure.microsoft.com/en-au/pricing/calculator
+
+2_1 - Pets.json (.\data\pets.json)
+2_3 - SQL queries 
+2_4 - More SQL queries
+2_4 - SQL API reference https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-sql-query-reference
+2_5 - UDF example code
+2_6 - .NET Example Code for querying SQL API (.\Section2_ConnectingToSQLAPI\SQLExample.sln)
+
+3_2 - Gremline Graph queries (see section 2_3 below)
+3_2 - Querying Gremlin from .NET (.\Section3_QueryingGremlineFromNET\GremlineExample.sln)
+3_3 - MongoDB support https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-feature-support
+3_3 - Robo 3T https://robomongo.org/
+3_5 - Cosmos DB Table API reference https://docs.microsoft.com/en-us/azure/cosmos-db/table-introduction
+
+Commands
+
+Section 2_3 SQL Queries
+--------------------------------
+SELECT * FROM cats
+SELECT cats.ownerName FROM cats
+SELECT * FROM c
+SELECT * FROM c where c.ownerName='Alex M'
+SELECT top 5 c.ownerName, c.telephone FROM c order by c.ownerName
+select c.ownerName from c
+select value c.ownerName from c
+SELECT {"owner": p.ownerName, "telephone": p.telephone} as ownerDetails FROM pets p
+SELECT (c.state = 'VIC') ? 'Victoria' : 'Not Victoria' as description FROM c
+
+
+Section 2_4 More SQL Queries
+-------------------------------
+SELECT c.registration.status from c
+SELECT * from c.pets[0]
+SELECT ARRAY_LENGTH(c.pets) as NumberOfPets FROM c
+SELECT * FROM c WHERE ARRAY_CONTAINS(c.pets, {name: 'Frank'}, true)
+SELECT * FROM c WHERE ARRAY_CONTAINS(c.pets, {name: 'Frank'}, false)
+
+Section 3_2 Graph Queries
+-------------------------------
+g.V()
+g.V().count()
+g.addV('person').property('id','p.alex').property('name','alex')
+g.addV('person').property('id','p.peter').property('name','Peter')
+g.addV('company').property('id', 'c.readify').property('name', 'Readify').property('city', 'Melbourne')
+g.addV('company').property('id', 'c.acloudguru').property('name', 'A Cloud Guru').property('city', 'Melbourne')
+g.V('p.alex').addE('friends').to(g.V('p.peter'))
+g.V('p.peter').addE('friends').to(g.V('p.alex'))
+g.V().hasLabel('person')
+g.V().hasLabel('company')
+g.V('c.readify').InE('works for').outV().outE('friends')
+

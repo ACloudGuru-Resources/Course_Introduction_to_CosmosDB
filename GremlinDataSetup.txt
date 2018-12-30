@@ -1,0 +1,59 @@
+g.addV('person')
+.property('id', 'p.alex')
+.property('name', 'Alex')
+
+g.addV('person')
+.property('id', 'p.peter')
+.property('name', 'Peter')
+
+g.addV('person')
+.property('id', 'p.lars')
+.property('name', 'Lars')
+
+g.addV('company')
+.property('id', 'c.readify')
+.property('name', 'Readify')
+.property('city', 'Melbourne')
+
+g.addV('company')
+.property('id', 'c.acloudguru')
+.property('name', 'A Cloud Guru')
+.property('city', 'Melbourne')
+
+g.V('p.alex').addE('friends').to(g.V('p.peter'))
+g.V('p.peter').addE('friends').to(g.V('p.alex'))
+
+g.V('p.alex').addE('friends').to(g.V('p.lars'))
+g.V('p.lars').addE('friends').to(g.V('p.alex'))
+
+
+g.V('p.alex').addE('previously worked with').to(g.V('p.peter'))
+g.V('p.peter').addE('previously worked with').to(g.V('p.alex'))
+
+
+g.V('p.alex').addE('previously worked with').to(g.V('p.lars'))
+g.V('p.lars').addE('previously worked with').to(g.V('p.alex'))
+
+g.V('p.lars').addE('works with').to(g.V('p.peter'))
+g.V('p.peter').addE('works with').to(g.V('p.lars'))
+
+
+g.V('p.alex').addE('works for').to(g.V('c.readify'))
+g.V('p.peter').addE('works for').to(g.V('c.acloudguru'))
+g.V('p.lars').addE('works for').to(g.V('c.acloudguru'))
+
+#all vertexes
+g.V()
+
+#number of verticies
+g.V().count()
+
+#who are the people and companies
+g.V().hasLabel('person')
+g.V().hasLabel('company')
+
+#friends of people who work for Readify
+g.V('c.readify').inE('works for').outV().outE('friends')
+
+#find Alex's friends
+g.V().has('name','Alex').out('friends')

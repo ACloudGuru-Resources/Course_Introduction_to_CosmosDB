@@ -1,0 +1,191 @@
+[
+  {
+    "ownerName": "Alex M",
+    "telephone": "03 845345",
+    "city": "Melbourne",
+    "state": "VIC",
+    "registration" : {
+      "status" : "current",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "cat",
+        "name": "Buddy",
+        "age": 8,
+        "breed": "Tabby"
+      },
+      {
+        "type": "cat",
+        "name": "Widget",
+        "age": 2,
+        "breed": "Siamese"
+      }
+    ]
+  },
+
+  {
+    "ownerName": "Lars K",
+    "telephone": "03 545353",
+    "city": "Ballarat",
+    "state": "VIC",
+    "registration" : {
+      "status" : "expired",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "dog",
+        "name": "Jackie",
+        "age": 6,
+        "breed": "German Shepherd"
+      }
+    ]
+  },
+
+  {
+    "ownerName": "Karen M",
+    "telephone": "02 334534",
+    "city": "Ballarat",
+    "state": "VIC",
+    "registration" : {
+      "status" : "current",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "cat",
+        "name": "George",
+        "age": 3,
+        "breed": "British Blue"
+      },
+      {
+        "type": "cat",
+        "name": "Beth",
+        "age": 12,
+        "breed": "American Bobtail"
+      },
+      {
+        "type": "cat",
+        "name": "Lucy",
+        "age": 10,
+        "breed": "Persian"
+      }
+    ]
+  },
+
+  {
+    "ownerName": "Jamie G",
+    "telephone": "02 2324324",
+    "city": "Sydney",
+    "state": "NSW",
+    "registration" : {
+      "status" : "current",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "dog",
+        "name": "Spike",
+        "age": 4,
+        "breed": "Bulldog"
+      }
+    ]
+  },
+
+  {
+    "ownerName": "Phil J",
+    "telephone": "02 111244",
+    "city": "Sydney",
+    "state": "WA",
+    "registration" : {
+      "status" : "expired",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "cat",
+        "name": "Snowball",
+        "age": 8,
+        "breed": "Moggy"
+      },
+	  
+	  {
+        "type": "dog",
+        "name": "Princess",
+        "age": 1,
+        "breed": "Poodle"
+      }
+    ]
+  },
+
+  {
+    "ownerName": "Gavin O",
+    "telephone": "03 324332",
+    "city": "Melbourne",
+    "state": "VIC",
+    "registration" : {
+      "status" : "current",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "cat",
+        "name": "Horace",
+        "age": 2,
+        "breed": "Siamese"
+      }
+    ]
+  },
+
+
+  {
+    "ownerName": "Billie O",
+    "telephone": "06 24222",
+    "city": "Perth",
+    "state": "WA",
+    "registration" : {
+      "status" : "expired",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "dog",
+        "name": "Frank",
+        "age": 2,
+        "breed": "Labrador"
+      }
+    ]
+  },
+
+  {
+    "ownerName": "Karen V",
+    "telephone": "02 234234",
+    "city": "Sydney",
+    "state": "NSW",
+    "registration" : {
+      "status" : "current",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "cat",
+        "name": "Lulu",
+        "age": 2,
+        "breed": "Moggy"
+      }
+    ]
+  },
+
+  {
+    "ownerName": "Gareth J",
+    "telephone": "01 32423",
+    "city": "Sydney",
+    "state": "NSW",
+    "registration" : {
+      "status" : "expired",
+      "cost" : 50
+    },
+    "pets": []
+  }
+]

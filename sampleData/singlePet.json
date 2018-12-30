@@ -1,0 +1,24 @@
+{
+    "ownerName": "Alex M",
+    "telephone": "03 845345",
+    "city": "Melbourne",
+    "state": "VIC",
+    "registration" : {
+      "status" : "current",
+      "cost" : 50
+    },
+    "pets": [
+      {
+        "type": "cat",
+        "name": "Buddy",
+        "age": 8,
+        "breed": "Tabby"
+      },
+      {
+        "type": "cat",
+        "name": "Widget",
+        "age": 2,
+        "breed": "Siamese"
+      }
+    ]
+}
